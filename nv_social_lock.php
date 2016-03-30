@@ -82,7 +82,7 @@ $_pt_1 = '/\[social-lock\](?:(.+?)?\[\/social-lock\])?/';
 $check_shortcode = preg_match_all($_pt_1, $contents);
 if($check_shortcode == 1){
 	$contents = preg_replace(
-		'%\[social-lock]([^[]*)\[/social-lock]%',
+		'/\[social-lock](.*?)\[\/social-lock]/s',
 		$html_str_1. '\1' . $html_str_2 ,
 		$contents
 		);
