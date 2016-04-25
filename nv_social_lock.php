@@ -8,7 +8,7 @@ $twitter_mess = 'Upgrade your social buttons to get more social traffic!';
 
 //FB Page URL
 $fb_link = $client_info['selfurl'];
-$fb_appid = '131761626979828';
+$fb_appid = '1726972170850062';
 
 $google_link = $client_info['selfurl'];
 
@@ -24,7 +24,7 @@ $html_str_2 = '
 	</div>
 </div>'
 ;
-$html_css = '<link rel="stylesheet" href="https://cdn.rawgit.com/anhyeuviolet/social-locker/master/css/social-locker.css">';
+$html_css = '<link rel="stylesheet" href="https://rawgit.com/anhyeuviolet/social-locker/master/css/social-locker.css">';
 
 $html_js = '
 <script type="text/javascript" src="' . $js_link . '"></script>
@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
 			header: "' . $header_message . '",
 			message: "' . $message . '"
 		},
-        theme: "secrets",           
+        theme: "flat",           
 		buttons: {
 			order: [
 				"facebook-share",
@@ -54,8 +54,8 @@ jQuery(document).ready(function ($) {
 		// facebook options
 		facebook: {
 			appId: "'.$fb_appid.'",
-			like: {
-				// url to like
+			share: {
+				// url to share
 				url: "'.$fb_link.'"
 			}
 		},
