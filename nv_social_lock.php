@@ -10,6 +10,8 @@ $twitter_mess = 'Upgrade your social buttons to get more social traffic!';
 $fb_link = $client_info['selfurl'];
 $fb_appid = '1726972170850062';
 
+$google_clientId = '';
+// Look like 959106316043-n6dcllcul0mjo9nibuohji2uugk8n98f.apps.googleusercontent.com
 $google_link = $client_info['selfurl'];
 
 $js_link = 'https://gitcdn.link/repo/anhyeuviolet/social-locker/master/js/Locklike.js';
@@ -59,14 +61,25 @@ jQuery(document).ready(function ($) {
 				url: "'.$fb_link.'"
 			}
 		},
-		google: {
-			plus: {
-				// url to plus +1
-				url: "' . $google_link . '" 
-			}
-		}            
+        "google": {
+            "clientId": "' . $google_clientId . '",
+            "lang": "en",
+            "plus": {
+                "url": "' . $google_link . '",
+                "title": "+1 us"
+            },
+            "share": {
+                "url": "' . $google_link . '",
+                "title": "share"
+            }
+        },
+        "youtube": {
+            "subscribe": {
+                "clientId": "' . $google_clientId . '",
+                "title": "Youtube"
+            }
+        }        
 	});
-
 });
 </script>
 
